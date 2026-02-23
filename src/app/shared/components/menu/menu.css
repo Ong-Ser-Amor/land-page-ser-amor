@@ -3,19 +3,21 @@
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 2.5rem;
+  padding: 0 2rem;
+  box-sizing: border-box;
 }
 
 .menu-header {
-  display: none;
+  display: flex;
   align-items: center;
 }
 
 .logo {
-  display: none;
-  height: auto;
-  width: auto;
+  display: block;
+  width: 70px;
+  height: 70px;
   object-fit: contain;
 }
 
