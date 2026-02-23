@@ -1,0 +1,21 @@
+<section class="section-carousel" [attr.id]="sectionId">
+  <div class="container">
+    <h2 class="section-title" [style.color]="titleColor">{{ title }}</h2>
+
+    <p class="section-description" *ngIf="description">{{ description }}</p>
+
+    <div class="carousel-outer">
+      <button class="carousel-btn prev" (click)="prevSlide()" aria-label="Anterior">&#10094;</button>
+
+      <div class="carousel-frame">
+        <div class="carousel-track" [style.transform]="'translateX(' + trackTranslatePercent() + '%)'">
+          <div class="carousel-item" *ngFor="let img of images">
+            <img [src]="img.src" [alt]="img.alt || title" />
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-btn next" (click)="nextSlide()" aria-label="Próximo">&#10095;</button>
+    </div>
+  </div>
+</section>

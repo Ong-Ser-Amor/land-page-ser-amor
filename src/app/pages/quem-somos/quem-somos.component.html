@@ -1,0 +1,37 @@
+<section class="quem-somos-section" id="quem-somos">
+  <div class="container">
+    <h2 class="quem-somos-title">QUEM SOMOS</h2>
+
+    <div class="top-row">
+      <div class="text-block">
+        <p class="intro-text">
+          Somos uma organização dedicada a transformar realidades através de ações comunitárias,
+          educação e apoio direto às famílias. Nosso propósito é gerar oportunidades, acolhimento e
+          fortalecimento de redes locais.
+        </p>
+      </div>
+
+      <div class="image-block" role="img" aria-label="Imagem representativa"></div>
+    </div>
+
+    <h3 class="history-title">Sobre a nossa história</h3>
+
+    <p class="history-text">
+      Desde a nossa fundação, a ONG Ser Amor atua de forma contínua e integrada junto às comunidades, promovendo ações de acolhimento, educação, capacitação e fortalecimento de vínculos. Nossos projetos nascem da escuta ativa às necessidades locais e são executados em parceria com moradores, escolas, organizações e voluntários, buscando soluções contextualizadas. Ao longo dos anos acompanhamos famílias, estimulamos o protagonismo comunitário, criamos redes de apoio e monitoramos resultados para aprimorar práticas. Trabalhamos com transparência e foco na sustentabilidade, buscando impacto social duradouro.
+    </p>
+
+    <div class="carousel-quem-somos">
+      <button class="carousel-btn prev" (click)="prevSlide()" aria-label="Anterior">&#10094;</button>
+
+      <div class="carousel-frame">
+        <div class="carousel-track" [style.transform]="'translateX(' + trackTranslatePercent() + '%)'">
+          <div class="carousel-item" *ngFor="let img of carouselImages">
+            <img [src]="img.src" [alt]="img.alt" />
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-btn next" (click)="nextSlide()" aria-label="Próximo">&#10095;</button>
+    </div>
+  </div>
+</section>
