@@ -9,6 +9,7 @@ import { NosApoieComponent } from '../nos-apoie/nos-apoie.component';
 import { NgFor, NgIf } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { track } from '@vercel/analytics';
 
 interface CarouselImage {
   src: string;
@@ -37,5 +38,12 @@ export class Home {
 
   prevSlide() {
     this.currentSlideIndex = (this.currentSlideIndex - 1 + this.carouselImages.length) % this.carouselImages.length;
+  }
+
+  onDonateClick() {
+    track('Donate Button Clicked', {
+      location: 'home_hero',
+      buttonText: 'Doe Agora'
+    });
   }
 }
