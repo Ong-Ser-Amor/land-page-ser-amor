@@ -24,11 +24,15 @@ export class QuemSomosComponent implements OnInit, OnDestroy {
   private resizeListener: () => void = () => {};
 
   carouselImages: CarouselImage[] = [
-    { src: '/carrossel-quem-somos/image1.svg', alt: 'Imagem 1' },
-    { src: '/carrossel-quem-somos/image2.svg', alt: 'Imagem 2' },
-    { src: '/carrossel-quem-somos/image3.svg', alt: 'Imagem 3' },
-    { src: '/carrossel-quem-somos/image4.svg', alt: 'Imagem 4' },
-    { src: '/carrossel-quem-somos/image5.svg', alt: 'Imagem 5' },
+    { src: '/quem-somos/image1.jpeg', alt: 'Imagem 1' },
+    { src: '/quem-somos/image2.jpeg', alt: 'Imagem 2' },
+    { src: '/quem-somos/image3.jpeg', alt: 'Imagem 3' },
+    { src: '/quem-somos/image4.jpeg', alt: 'Imagem 4' },
+    { src: '/quem-somos/image5.jpeg', alt: 'Imagem 5' },
+    { src: '/quem-somos/image6.jpeg', alt: 'Imagem 6' },
+    { src: '/quem-somos/image7.jpeg', alt: 'Imagem 7' },
+    { src: '/quem-somos/image8.jpeg', alt: 'Imagem 8' },
+    { src: '/quem-somos/image9.jpeg', alt: 'Imagem 9' },
   ];
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
