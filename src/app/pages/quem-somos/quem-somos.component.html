@@ -5,19 +5,47 @@
     <div class="top-row">
       <div class="text-block">
         <p class="intro-text">
-          Somos uma organização dedicada a transformar realidades através de ações comunitárias,
-          educação e apoio direto às famílias. Nosso propósito é gerar oportunidades, acolhimento e
-          fortalecimento de redes locais.
+          A OSC Ser Amor é uma organização social comprometida com a transformação de vidas por meio do acolhimento, do
+          cuidado e da inclusão.
+        </p>
+        <p class="intro-text">
+          Atuamos no apoio psicossocial de crianças e do adolescente e suas famílias, sob o tripé: educação,
+          empregabilidade e desenvolvimento da inteligência emocional.
+        </p>
+        <p class="intro-text">
+          Acreditamos que cada criança carrega um potencial único e que, com apoio, oportunidades e afeto, é possível
+          romper ciclos de exclusão e construir novos caminhos.
+
+        </p>
+        <p class="intro-text">
+          Sediada entre as duas maiores comunidades de Itapevi, estendemos nossos serviços de acolhimento aos quatro
+          cantos da cidade.
         </p>
       </div>
-
-      <div class="image-block" role="img" aria-label="Imagem representativa"></div>
+      <img class="image-block" src="/quem-somos/quem-somos.jpeg" alt="Imagem da ONG Ser Amor" />
     </div>
 
     <h3 class="history-title">Sobre a nossa história</h3>
 
     <p class="history-text">
-      Desde a nossa fundação, a ONG Ser Amor atua de forma contínua e integrada junto às comunidades, promovendo ações de acolhimento, educação, capacitação e fortalecimento de vínculos. Nossos projetos nascem da escuta ativa às necessidades locais e são executados em parceria com moradores, escolas, organizações e voluntários, buscando soluções contextualizadas. Ao longo dos anos acompanhamos famílias, estimulamos o protagonismo comunitário, criamos redes de apoio e monitoramos resultados para aprimorar práticas. Trabalhamos com transparência e foco na sustentabilidade, buscando impacto social duradouro.
+      Nascemos sem a pretensão de nos tornar a maior ONG da região. Desde o início, nosso objetivo era claro: não
+      podemos permanecer inertes diante do sofrimento de crianças e adolescentes que não têm sequer o mínimo necessário
+      para viver com dignidade.
+    </p>
+
+    <p class="history-text">
+      Tudo começou há 10 anos, com um grupo de jovens inconformados, sentados em uma calçada, que decidiram não ignorar
+      aquilo que ardia em seus corações: o PROPÓSITO.
+    </p>
+
+    <p class="history-text">
+      Desde então, lutamos todos os dias para criar oportunidades por meio do trabalho voluntário. Construímos uma
+      grande rede de solidariedade, conectando pessoas que desejam servir àquelas que precisam de ajuda.
+    </p>
+
+    <p class="history-text">
+      Hoje, somos um time de 30 coordenadores e mais de 200 voluntários que, com trabalho sério e comprometido, impactam
+      a vida de mais de 1.000 famílias.
     </p>
 
     <div class="carousel-quem-somos">
@@ -31,7 +59,28 @@
         </div>
       </div>
 
+
       <button class="carousel-btn next" (click)="nextSlide()" aria-label="Próximo">&#10095;</button>
+    </div>
+
+    <!-- Nova seção: Criança com fome não aprende -->
+    <div class="cozinha-section">
+      <h2 class="cozinha-title">Criança com fome não aprende! E a gente sempre soube disso!</h2>
+      <p class="cozinha-text">
+        Servimos café da manhã, almoço e café da tarde em dia de aula. Cardápio completo e feito com muito carinho por nossas voluntárias. Nosso time de Acolhimento familiar mapeia as necessidades das famílias das crianças e programa a retirada da cesta básica mensal  que está condicionada a assiduidade das crianças as atividades.<br>
+        O objetivo é mantermos o vínculo com a criança para trabalharmos  todos os aspecto de desenvolvimento bem como garantir que em casa não falte comida no prato.
+      </p>
+      <div class="carousel-cozinha">
+        <button class="carousel-btn prev" (click)="prevSlideFome()" aria-label="Anterior">&#10094;</button>
+        <div class="carousel-frame">
+          <div class="carousel-track" [style.transform]="'translateX(' + trackTranslatePercentFome() + '%)'">
+            <div class="carousel-item" *ngFor="let img of carouselFomeImages">
+              <img [src]="img.src" [alt]="img.alt" />
+            </div>
+          </div>
+        </div>
+        <button class="carousel-btn next" (click)="nextSlideFome()" aria-label="Próximo">&#10095;</button>
+      </div>
     </div>
   </div>
 </section>
