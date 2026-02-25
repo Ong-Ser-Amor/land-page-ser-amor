@@ -1,3 +1,63 @@
+.cozinha-section {
+  margin: 3rem 0 2rem 0;
+  padding: 0 1rem;
+  width: 100%;
+}
+.cozinha-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.0125rem;
+  text-align: left;
+  margin-bottom: 1.25rem;
+}
+.cozinha-text {
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.0125rem;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+.carousel-cozinha {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: center;
+}
+.carousel-cozinha .carousel-frame {
+  width: 100%;
+  overflow: hidden;
+  background: #f6f6f6;
+  border-radius: 1rem;
+}
+.carousel-cozinha .carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+.carousel-cozinha .carousel-item {
+  flex: 0 0 calc(100% / 3);
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+.carousel-cozinha .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .cozinha-title {
+    font-size: 1.25rem;
+  }
+  .carousel-cozinha .carousel-item {
+    flex: 0 0 100%;
+  }
+  .carousel-cozinha .carousel-item img {
+    height: 10rem;
+  }
+}
 
 .quem-somos-section {
   font-family: 'Montserrat', sans-serif;

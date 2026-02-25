@@ -59,7 +59,28 @@
         </div>
       </div>
 
+
       <button class="carousel-btn next" (click)="nextSlide()" aria-label="Próximo">&#10095;</button>
+    </div>
+
+    <!-- Nova seção: Criança com fome não aprende -->
+    <div class="cozinha-section">
+      <h2 class="cozinha-title">Criança com fome não aprende! E a gente sempre soube disso!</h2>
+      <p class="cozinha-text">
+        Servimos café da manhã, almoço e café da tarde em dia de aula. Cardápio completo e feito com muito carinho por nossas voluntárias. Nosso time de Acolhimento familiar mapeia as necessidades das famílias das crianças e programa a retirada da cesta básica mensal  que está condicionada a assiduidade das crianças as atividades.<br>
+        O objetivo é mantermos o vínculo com a criança para trabalharmos  todos os aspecto de desenvolvimento bem como garantir que em casa não falte comida no prato.
+      </p>
+      <div class="carousel-cozinha">
+        <button class="carousel-btn prev" (click)="prevSlideFome()" aria-label="Anterior">&#10094;</button>
+        <div class="carousel-frame">
+          <div class="carousel-track" [style.transform]="'translateX(' + trackTranslatePercentFome() + '%)'">
+            <div class="carousel-item" *ngFor="let img of carouselFomeImages">
+              <img [src]="img.src" [alt]="img.alt" />
+            </div>
+          </div>
+        </div>
+        <button class="carousel-btn next" (click)="nextSlideFome()" aria-label="Próximo">&#10095;</button>
+      </div>
     </div>
   </div>
 </section>
