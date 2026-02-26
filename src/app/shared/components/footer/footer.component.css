@@ -1,7 +1,7 @@
 .footer {
   background-color: #f5f5f5;
   border-top: 0.0625rem solid #e0e0e0;
-  padding: 3rem 2rem;
+  padding: 3rem 0;
 }
 
 .footer-container {
@@ -29,11 +29,11 @@
 
 .footer-text {
   font-family: Montserrat, sans-serif;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.0125rem;
-  color: #333;
+  font-weight: 500;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  letter-spacing: 0.01rem;
+  color: #444;
   margin: 0;
   flex: 1;
 }
@@ -47,11 +47,11 @@
 
 .footer-social-title {
   font-family: Montserrat, sans-serif;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.0125rem;
-  color: #333;
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  letter-spacing: 0.01rem;
+  color: #444;
   margin: 0;
 }
 

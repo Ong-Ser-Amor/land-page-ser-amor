@@ -14,10 +14,11 @@
 
 .nos-apoie-section .nos-apoie-description {
   font-family: Montserrat, sans-serif;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.0125rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  letter-spacing: 0.01rem;
+  color: #444;
   text-align: left;
 }
 
@@ -60,12 +61,12 @@
 
 .pix-label {
   font-family: Montserrat, sans-serif;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.0125rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  letter-spacing: 0.01rem;
   margin: 0.25rem 0;
-  color: #333;
+  color: #444;
 }
 
 .pix-images {
@@ -75,7 +76,6 @@
 }
 
 .pix-qrcode {
-  width: 6.25rem;
   height: 6.25rem;
   border-radius: 0.5rem;
   object-fit: contain;
@@ -89,12 +89,40 @@
 
 .pix-contact {
   font-family: Montserrat, sans-serif;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.0125rem;
-  color: #333;
+  font-weight: 500;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  letter-spacing: 0.01rem;
+  color: #444;
   margin: 0.75rem 0 0 0;
   padding-top: 0.75rem;
   border-top: 0.0625rem solid #e0e0e0;
+}
+
+@media screen and (max-width: 768px) {
+  .nos-apoie-section {
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .pix-capsule {
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .pix-info-wrapper {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .pix-images {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .pix-qrcode {
+    width: min(10rem, 100%);
+    height: auto;
+    max-width: 100%;
+  }
 }
