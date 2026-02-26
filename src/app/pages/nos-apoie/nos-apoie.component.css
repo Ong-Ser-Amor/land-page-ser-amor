@@ -101,7 +101,7 @@
 
 @media screen and (max-width: 768px) {
   .nos-apoie-section {
-    padding: 0 1rem;
+    padding: 0;
     box-sizing: border-box;
   }
 
