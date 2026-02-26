@@ -73,6 +73,21 @@
   flex-wrap: wrap;
 }
 
+.hero-buttons button[mat-raised-button],
+.hero-buttons button[mat-stroked-button] {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.hero-buttons button[mat-raised-button]:hover {
+  transform: translateY(-0.125rem) scale(1.02);
+  box-shadow: 0 0.4rem 0.9rem rgba(233, 30, 99, 0.28);
+}
+
+.hero-buttons button[mat-stroked-button]:hover {
+  transform: translateY(-0.125rem);
+  background-color: #fce4ec !important;
+}
+
 .btn {
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
