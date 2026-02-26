@@ -49,18 +49,17 @@
     </p>
 
     <div class="carousel-quem-somos">
-      <button class="carousel-btn prev" (click)="prevSlide()" aria-label="Anterior">&#10094;</button>
-
       <div class="carousel-frame">
+        <button class="carousel-btn prev" (click)="prevSlide()" aria-label="Anterior">&#10094;</button>
+
         <div class="carousel-track" [style.transform]="'translateX(' + trackTranslatePercent() + '%)'">
           <div class="carousel-item" *ngFor="let img of carouselImages">
             <img [src]="img.src" [alt]="img.alt" />
           </div>
         </div>
+
+        <button class="carousel-btn next" (click)="nextSlide()" aria-label="Próximo">&#10095;</button>
       </div>
-
-
-      <button class="carousel-btn next" (click)="nextSlide()" aria-label="Próximo">&#10095;</button>
     </div>
 
     <!-- Nova seção: Criança com fome não aprende -->
@@ -71,15 +70,17 @@
         O objetivo é mantermos o vínculo com a criança para trabalharmos  todos os aspecto de desenvolvimento bem como garantir que em casa não falte comida no prato.
       </p>
       <div class="carousel-cozinha">
-        <button class="carousel-btn prev" (click)="prevSlideFome()" aria-label="Anterior">&#10094;</button>
         <div class="carousel-frame">
+          <button class="carousel-btn prev" (click)="prevSlideFome()" aria-label="Anterior">&#10094;</button>
+
           <div class="carousel-track" [style.transform]="'translateX(' + trackTranslatePercentFome() + '%)'">
             <div class="carousel-item" *ngFor="let img of carouselFomeImages">
               <img [src]="img.src" [alt]="img.alt" />
             </div>
           </div>
+
+          <button class="carousel-btn next" (click)="nextSlideFome()" aria-label="Próximo">&#10095;</button>
         </div>
-        <button class="carousel-btn next" (click)="nextSlideFome()" aria-label="Próximo">&#10095;</button>
       </div>
     </div>
   </div>

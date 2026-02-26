@@ -20,16 +20,14 @@
   text-align: left;
 }
 .carousel-cozinha {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  justify-content: center;
+  width: 100%;
 }
 .carousel-cozinha .carousel-frame {
   width: 100%;
   overflow: hidden;
   background: #f6f6f6;
   border-radius: 1rem;
+  position: relative;
 }
 .carousel-cozinha .carousel-track {
   display: flex;
@@ -110,9 +108,7 @@
 }
 
 .carousel-quem-somos {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
+  width: 100%;
   margin-top: 1rem;
 }
 
@@ -120,6 +116,7 @@
   width: 100%;
   overflow: hidden;
   background: #f6f6f6;
+  position: relative;
 }
 
 .carousel-track {
@@ -153,6 +150,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.carousel-btn.prev {
+  left: 0.625rem;
+}
+
+.carousel-btn.next {
+  right: 0.625rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -170,15 +179,21 @@
 
   .image-block {
     flex: none;
-    width: 80vw;
+    width: 100%;
     max-width: 320px;
-    height: 10rem;
-    margin: 0 auto 1rem auto;
+    height: 100%;
+    margin: 0 0 1rem 0;
     display: block;
   }
 
   .carousel-item {
     flex: 0 0 100%;
+  }
+
+  .carousel-btn {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 1rem;
   }
 
 }
