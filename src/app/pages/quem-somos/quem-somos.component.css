@@ -54,9 +54,6 @@
   .carousel-cozinha .carousel-item {
     flex: 0 0 100%;
   }
-  .carousel-cozinha .carousel-item img {
-    height: 10rem;
-  }
 }
 
 .quem-somos-section {
@@ -182,7 +179,4 @@
     flex: 0 0 100%;
   }
 
-  .carousel-item img {
-    height: 15rem;
-  }
 }

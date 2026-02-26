@@ -289,6 +289,10 @@ nav.menu .menu-link {
 }
 
 @media screen and (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
+  }
+
   .header-container {
     flex-direction: row;
     justify-content: center;
@@ -323,6 +327,10 @@ nav.menu .menu-link {
      height: 15.625rem;
   }
 
+  .carousel-image {
+    height: auto;
+  }
+
   .carousel-container {
     gap: 0;
     position: relative;
@@ -332,6 +340,10 @@ nav.menu .menu-link {
     width: 2.25rem;
     height: 2.25rem;
     font-size: 1rem;
+  }
+
+  .construction-page {
+    padding: 1rem;
   }
 }
 
