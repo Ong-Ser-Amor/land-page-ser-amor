@@ -195,16 +195,18 @@ nav.menu .menu-link {
   height: 100%;
   display: block;
   object-fit: cover;
-  animation: fadeIn 0.5s ease-in-out;
+  animation: slideIn 0.7s ease-out;
   object-position: center;
 }
 
-@keyframes fadeIn {
+@keyframes slideIn {
   from {
     opacity: 0;
+    transform: translateX(30px);
   }
   to {
     opacity: 1;
+    transform: translateX(0);
   }
 }
 
@@ -497,4 +499,14 @@ nav.menu .menu-link {
       content: '...';
     }
   }
+
+/* Respeito à preferência de movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  .carousel-image {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
 

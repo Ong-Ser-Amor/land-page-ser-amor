@@ -23,7 +23,12 @@
       </div>
 
       <div class="carousel-section">
-        <div class="carousel-container">
+        <div 
+          class="carousel-container" 
+          (mouseenter)="pauseAutoSlide()" 
+          (mouseleave)="resumeAutoSlide()"
+          (touchstart)="pauseAutoSlide()"
+        >
           <button class="carousel-btn prev" (click)="prevSlide()" aria-label="Slide anterior">
             &#10094;
           </button>
@@ -48,7 +53,7 @@
             <button
               class="dot"
               [class.active]="$index === currentSlideIndex"
-              (click)="currentSlideIndex = $index"
+              (click)="goToSlide($index)"
               [attr.aria-label]="'Ir para imagem ' + ($index + 1)"
             ></button>
           }
