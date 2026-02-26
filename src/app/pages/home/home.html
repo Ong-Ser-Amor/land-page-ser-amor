@@ -1,65 +1,88 @@
-<header class="header">
-  <div class="header-container">
-    <div class="menu-section">
-      <app-menu></app-menu>
-    </div>
-  </div>
-</header>
-
-<main class="main-content">
-  <section class="hero-section">
-    <div class="hero-content">
-      <h1 class="hero-title">Cada vida transformada é um passo para mudar o mundo.</h1>
-      
-      <p class="hero-description">
-        A OSC Ser Amor promove desenvolvimento emocional, inclusão e proteção social para crianças típicas e atípicas em situação de vulnerabilidade em Itapevi.
-      </p>
-
-      <div class="hero-buttons">
-        <button mat-raised-button color="primary" (click)="onDonateClick()">Doe Agora</button>
-        <button mat-stroked-button>Saiba Mais</button>
+@if (!emConstrucao) {
+  <header class="header">
+    <div class="header-container">
+      <div class="menu-section">
+        <app-menu></app-menu>
       </div>
     </div>
+  </header>
 
-    <div class="carousel-section">
-      <div class="carousel-container">
-        <button class="carousel-btn prev" (click)="prevSlide()" aria-label="Slide anterior">
-          &#10094;
-        </button>
+  <main class="main-content">
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">Cada vida transformada é um passo para mudar o mundo.</h1>
 
-        <div class="carousel-wrapper">
-          @if (carouselImages.length > 0) {
-            <img
-              [src]="carouselImages[currentSlideIndex].src"
-              [alt]="carouselImages[currentSlideIndex].alt"
-              class="carousel-image"
-            />
-          }
+        <p class="hero-description">
+          A OSC Ser Amor promove desenvolvimento emocional, inclusão e proteção social para crianças típicas e atípicas em situação de vulnerabilidade em Itapevi.
+        </p>
+
+        <div class="hero-buttons">
+          <button mat-raised-button color="primary" (click)="onDonateClick()">Doe Agora</button>
+          <button mat-stroked-button>Saiba Mais</button>
+        </div>
+      </div>
+
+      <div class="carousel-section">
+        <div class="carousel-container">
+          <button class="carousel-btn prev" (click)="prevSlide()" aria-label="Slide anterior">
+            &#10094;
+          </button>
+
+          <div class="carousel-wrapper">
+            @if (carouselImages.length > 0) {
+              <img
+                [src]="carouselImages[currentSlideIndex].src"
+                [alt]="carouselImages[currentSlideIndex].alt"
+                class="carousel-image"
+              />
+            }
+          </div>
+
+          <button class="carousel-btn next" (click)="nextSlide()" aria-label="Próximo slide">
+            &#10095;
+          </button>
         </div>
 
-        <button class="carousel-btn next" (click)="nextSlide()" aria-label="Próximo slide">
-          &#10095;
-        </button>
+        <div class="carousel-dots">
+          @for (image of carouselImages; track $index) {
+            <button
+              class="dot"
+              [class.active]="$index === currentSlideIndex"
+              (click)="currentSlideIndex = $index"
+              [attr.aria-label]="'Ir para imagem ' + ($index + 1)"
+            ></button>
+          }
+        </div>
+      </div>
+    </section>
+
+    <app-quem-somos></app-quem-somos>
+    <app-atividades></app-atividades>
+    <app-projetos></app-projetos>
+    <app-parceiros></app-parceiros>
+    <app-nos-apoie></app-nos-apoie>
+  </main>
+
+  <app-footer></app-footer>
+} @else {
+  <main class="construction-page">
+    <section class="construction-content" aria-live="polite">
+      <div class="construction-visual">
+        <img src="/logo.png" alt="Imagem de destaque em construção" class="construction-image" />
+        <span class="pulse-ring ring-one" aria-hidden="true"></span>
+        <span class="pulse-ring ring-two" aria-hidden="true"></span>
       </div>
 
-      <div class="carousel-dots">
-        @for (image of carouselImages; track $index) {
-          <button
-            class="dot"
-            [class.active]="$index === currentSlideIndex"
-            (click)="currentSlideIndex = $index"
-            [attr.aria-label]="'Ir para imagem ' + ($index + 1)"
-          ></button>
-        }
+      <h1 class="construction-title">Página em construção</h1>
+      <p class="construction-message">Estamos preparando algo especial para você.</p>
+
+      <div class="loading-dots" aria-hidden="true">
+        <span class="loading-dot"></span>
+        <span class="loading-dot"></span>
+        <span class="loading-dot"></span>
       </div>
-    </div>
-  </section>
 
-  <app-quem-somos></app-quem-somos>
-  <app-atividades></app-atividades>
-  <app-projetos></app-projetos>
-  <app-parceiros></app-parceiros>
-  <app-nos-apoie></app-nos-apoie>
-</main>
-
-<app-footer></app-footer>
+      <p class="loading-text">Carregando novidades</p>
+    </section>
+  </main>
+}

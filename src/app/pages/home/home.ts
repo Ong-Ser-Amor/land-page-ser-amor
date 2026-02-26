@@ -24,6 +24,7 @@ interface CarouselImage {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Home {
+  emConstrucao = true;
   currentSlideIndex = 0;
 
   carouselImages: CarouselImage[] = [
