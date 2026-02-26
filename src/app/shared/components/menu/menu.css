@@ -1,3 +1,8 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
 .menu {
   width: 100%;
   position: relative;
@@ -10,6 +15,11 @@
 }
 
 .menu-header {
+  display: flex;
+  align-items: center;
+}
+
+.menu-top-row {
   display: flex;
   align-items: center;
 }
@@ -93,6 +103,16 @@
 }
 
 @media screen and (max-width: 768px) {
+  .menu {
+    display: block;
+    padding: 0;
+  }
+
+  .menu-top-row {
+    width: 100%;
+    justify-content: space-between;
+  }
+
   .menu-toggle {
     display: flex;
     align-items: center;
@@ -100,14 +120,15 @@
   }
 
   .menu-list {
-    position: fixed;
-    top: 4rem;
-    left: 0.75rem;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: auto;
     width: 14rem;
     flex-direction: column;
     gap: 0;
     padding: 0.5rem 0;
-    margin: 0;
+    margin: 0.5rem 0 0;
     background: #ffffff;
     border: 0.0625rem solid #e0e0e0;
     border-radius: 0.5rem;
@@ -128,9 +149,9 @@
   .menu-header {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 0.5rem;
+    justify-content: flex-start;
+    width: auto;
+    margin-bottom: 0;
   }
 
   .logo {
@@ -138,11 +159,6 @@
     height: 2.5rem;
     width: auto;
     object-fit: contain;
-  }
-
-  .menu {
-    flex-direction: column;
-    gap: 0;
   }
 
   .menu-link {
