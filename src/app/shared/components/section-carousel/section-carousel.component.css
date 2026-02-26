@@ -9,10 +9,11 @@
 
 .section-carousel .section-description {
   font-family: Montserrat, sans-serif;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.0125rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  letter-spacing: 0.01rem;
+  color: #444;
   text-align: left;
   max-width: 80.625rem;
   margin: 0 auto 1.25rem auto;

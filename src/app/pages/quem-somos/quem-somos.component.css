@@ -11,11 +11,11 @@
   margin-bottom: 1.25rem;
 }
 .cozinha-text {
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.0125rem;
-  color: #333;
+  font-weight: 500;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  letter-spacing: 0.01rem;
+  color: #444;
   margin-bottom: 2rem;
   text-align: left;
 }
@@ -80,10 +80,11 @@
 }
 
 .intro-text {
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.0125rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  letter-spacing: 0.01rem;
+  color: #444;
   margin: 0;
 }
 
@@ -101,10 +102,11 @@
 }
 
 .history-text {
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.0125rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  letter-spacing: 0.01rem;
+  color: #444;
 }
 
 .carousel-quem-somos {

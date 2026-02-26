@@ -59,11 +59,11 @@
 .hero-description {
   font-family: Roboto, sans-serif;
   font-weight: 400;
-  font-size: 1.125rem;
-  line-height: 150%;
-  letter-spacing: 0%;
+  font-size: 1rem;
+  line-height: 1.7;
+  letter-spacing: 0.01rem;
   margin: 0 0 2rem 0;
-  color: #555;
+  color: #4f4f4f;
   max-width: 31.25rem;
 }
 
@@ -404,8 +404,10 @@ nav.menu .menu-link {
 
   .construction-message {
     margin: 0;
-    color: #666;
-    font-size: 1rem;
+    color: #5f5f5f;
+    font-size: 0.98rem;
+    line-height: 1.6;
+    letter-spacing: 0.01rem;
   }
 
   .loading-dots {
@@ -433,7 +435,9 @@ nav.menu .menu-link {
   .loading-text {
     margin: 0;
     color: #777;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    letter-spacing: 0.01rem;
   }
 
   .loading-text::after {
