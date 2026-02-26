@@ -180,7 +180,6 @@
   .image-block {
     flex: none;
     width: 100%;
-    max-width: 320px;
     height: 100%;
     margin: 0 0 1rem 0;
     display: block;

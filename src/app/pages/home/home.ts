@@ -90,6 +90,12 @@ export class Home implements AfterViewInit, OnDestroy {
       location: 'home_hero',
       buttonText: 'Doe Agora'
     });
+
+    this.scrollToSection('nos-apoie');
+  }
+
+  onKnowMoreClick() {
+    this.scrollToSection('historia');
   }
 
   private startAutoSlide() {
@@ -112,5 +118,39 @@ export class Home implements AfterViewInit, OnDestroy {
   private restartAutoSlide() {
     this.stopAutoSlide();
     this.startAutoSlide();
+  }
+
+  private scrollToSection(sectionId: string) {
+    if (!this.isBrowser) {
+      return;
+    }
+
+    const target = document.getElementById(sectionId);
+    if (!target) {
+      return;
+    }
+
+    const startY = window.scrollY;
+    const targetY = target.getBoundingClientRect().top + window.scrollY;
+    const distance = targetY - startY;
+    const duration = 1200;
+    const startTime = performance.now();
+
+    const easeInOutCubic = (time: number) =>
+      time < 0.5 ? 4 * time * time * time : 1 - Math.pow(-2 * time + 2, 3) / 2;
+
+    const animateScroll = (currentTime: number) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = easeInOutCubic(progress);
+
+      window.scrollTo(0, startY + distance * eased);
+
+      if (progress < 1) {
+        requestAnimationFrame(animateScroll);
+      }
+    };
+
+    requestAnimationFrame(animateScroll);
   }
 }
