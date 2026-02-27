@@ -1,1 +1,8 @@
-<app-home></app-home>
+<div *ngIf="isLoading" class="page-loader">
+  <div class="loader-content">
+    <div class="loader-spinner"></div>
+    <p class="loader-text">Carregando...</p>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

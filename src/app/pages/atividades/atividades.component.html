@@ -1,0 +1,53 @@
+<main class="main-content">
+  <div class="container activities-page">
+    <header class="page-header">
+      <h1 class="section-title">ATIVIDADES</h1>
+      <p class="subtitle">
+        Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.
+      </p>
+    </header>
+
+    <section class="main-activities">
+      <h2 class="group-title">Principais atividades</h2>
+      <div class="activities-grid">
+        @for (activity of mainActivities; track activity.title) {
+          <mat-card class="activity-card">
+            <div class="card-content-wrapper">
+              <div class="icon-container">
+                <mat-icon>{{activity.icon}}</mat-icon>
+              </div>
+              <mat-card-title>{{activity.title}}</mat-card-title>
+              <mat-card-content>
+                <p>{{activity.description}}</p>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-stroked-button color="primary">Matrícula ></button>
+              </mat-card-actions>
+            </div>
+          </mat-card>
+        }
+      </div>
+    </section>
+
+    <section class="requirements">
+      <h2 class="group-title">Pré requisitos para se matricular</h2>
+      <ul class="requirements-list">
+        @for (req of requirements; track req) {
+          <li>{{req}}</li>
+        }
+      </ul>
+    </section>
+
+    <section class="other-activities">
+      <h2 class="group-title">Outras atividades</h2>
+      <div class="other-grid">
+        @for (other of otherActivities; track $index) {
+          <div class="other-card">
+            <div class="placeholder-img"></div>
+            <button mat-stroked-button color="primary">Matrícula ></button>
+          </div>
+        }
+      </div>
+    </section>
+  </div>
+</main>
