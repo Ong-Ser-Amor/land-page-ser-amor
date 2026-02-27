@@ -10,7 +10,7 @@ interface CarouselImage {
 }
 
 @Component({
-  selector: 'app-quem-somos',
+  selector: 'app-home-quem-somos',
   standalone: true,
   imports: [CommonModule, NgFor, MatCardModule],
   templateUrl: './quem-somos.component.html',

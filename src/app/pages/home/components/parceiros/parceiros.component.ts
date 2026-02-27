@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { SectionCarouselComponent } from '@app/shared/components/section-carousel/section-carousel.component';
 
 @Component({
-  selector: 'app-parceiros',
+  selector: 'app-home-parceiros',
   standalone: true,
   imports: [SectionCarouselComponent],
   templateUrl: './parceiros.component.html'
