@@ -1,15 +1,16 @@
 import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, Inject, OnDestroy, PLATFORM_ID } from '@angular/core';
 import { Menu } from '@app/shared/components/menu/menu';
 import { FooterComponent } from '@app/shared/components/footer/footer.component';
-import { QuemSomosComponent } from './components/quem-somos/quem-somos.component';
-import { AtividadesComponent } from './components/atividades/atividades.component';
-import { ProjetosComponent } from './components/projetos/projetos.component';
-import { ParceirosComponent } from './components/parceiros/parceiros.component';
-import { NosApoieComponent } from './components/nos-apoie/nos-apoie.component';
+import { QuemSomosComponent } from '../quem-somos/quem-somos.component';
+import { AtividadesComponent } from '../atividades/atividades.component';
+import { ProjetosComponent } from '../projetos/projetos.component';
+import { ParceirosComponent } from '../parceiros/parceiros.component';
+import { NosApoieComponent } from '../nos-apoie/nos-apoie.component';
 import { isPlatformBrowser, NgFor, NgIf } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { track } from '@vercel/analytics';
+import { RouterLink } from '@angular/router';
 
 interface CarouselImage {
   src: string;
@@ -18,7 +19,8 @@ interface CarouselImage {
 
 @Component({
   selector: 'app-home',
-  imports: [Menu, FooterComponent, NgFor, NgIf, MatButtonModule, MatCardModule, QuemSomosComponent, AtividadesComponent, ProjetosComponent, ParceirosComponent, NosApoieComponent],
+  standalone: true,
+  imports: [Menu, FooterComponent, NgFor, NgIf, MatButtonModule, MatCardModule, QuemSomosComponent, AtividadesComponent, ProjetosComponent, ParceirosComponent, NosApoieComponent, RouterLink],
   templateUrl: './home.html',
   styleUrl: './home.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

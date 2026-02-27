@@ -1,0 +1,38 @@
+<header class="header">
+  <div class="header-container">
+    <app-menu></app-menu>
+  </div>
+</header>
+
+<main class="main-content">
+  <div class="container partners-page">
+    <header class="page-header">
+      <h1 class="section-title">PARCEIROS</h1>
+      <p class="subtitle">
+        Nossos parceiros são fundamentais para que possamos continuar transformando vidas. Agradecemos a cada um que acredita na nossa causa.
+      </p>
+    </header>
+
+    <section class="partners-section">
+      <div class="partners-grid">
+        @for (partner of partners; track partner.name) {
+          <div class="partner-card">
+            <div class="partner-logo-placeholder">
+              <span class="placeholder-text">Logo {{partner.name}}</span>
+            </div>
+          </div>
+        }
+      </div>
+    </section>
+
+    <section class="be-partner">
+      <div class="be-partner-content">
+        <h2>Seja um parceiro</h2>
+        <p>Sua empresa pode fazer a diferença na vida de centenas de crianças. Entre em contato conosco e saiba como ajudar.</p>
+        <button class="btn-contact">Entrar em contato</button>
+      </div>
+    </section>
+  </div>
+</main>
+
+<app-footer></app-footer>

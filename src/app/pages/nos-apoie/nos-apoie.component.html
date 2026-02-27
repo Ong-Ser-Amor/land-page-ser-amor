@@ -1,0 +1,57 @@
+<header class="header">
+  <div class="header-container">
+    <app-menu></app-menu>
+  </div>
+</header>
+
+<main class="main-content">
+  <div class="container support-page">
+    <header class="page-header">
+      <h1 class="section-title">COMO NOS APOIAR</h1>
+      <p class="subtitle">
+        Existem diversas formas de você ajudar a ONG Ser Amor a continuar sua missão. Escolha a que melhor se adapta a você.
+      </p>
+    </header>
+
+    <section class="support-grid">
+      @for (way of supportWays; track way.title) {
+        <mat-card class="support-card">
+          <div class="icon-box">
+            <mat-icon>{{way.icon}}</mat-icon>
+          </div>
+          <mat-card-title>{{way.title}}</mat-card-title>
+          <mat-card-content>
+            <p>{{way.description}}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-raised-button color="primary">{{way.action}}</button>
+          </mat-card-actions>
+        </mat-card>
+      }
+    </section>
+
+    <section class="pix-section">
+      <div class="pix-card">
+        <div class="pix-info">
+          <h2>Ajude com PIX</h2>
+          <p>A forma mais rápida de contribuir com nossa causa.</p>
+          <div class="pix-key-box">
+            <span class="pix-label">Chave CNPJ:</span>
+            <span class="pix-value">{{pixKey}}</span>
+            <button class="btn-copy" mat-icon-button title="Copiar chave PIX">
+              <mat-icon>content_copy</mat-icon>
+            </button>
+          </div>
+        </div>
+        <div class="pix-qr">
+          <div class="qr-placeholder">
+            <mat-icon>qr_code_2</mat-icon>
+            <span>QR Code</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<app-footer></app-footer>

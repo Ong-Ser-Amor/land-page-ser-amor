@@ -1,10 +1,10 @@
 <nav class="menu">
   <div class="menu-top-row">
     <div class="menu-header">
-      <button type="button" class="brand-link" (click)="onNavigate('top')" aria-label="Voltar para a tela principal">
+      <a routerLink="/" class="brand-link" (click)="closeMenu()" aria-label="Voltar para a tela principal">
         <img src="/logo.png" alt="ONG Ser Amor Logo" class="logo" />
         <span class="brand-name">Ser Amor</span>
-      </button>
+      </a>
     </div>
     <button class="menu-toggle" (click)="toggleMenu()" aria-label="Menu">
       <span class="hamburger">{{ menuOpen() ? '✕' : '☰' }}</span>
@@ -12,12 +12,15 @@
   </div>
   <div class="menu-list" [class.open]="menuOpen()">
     @for (item of menuItems; track item.link) {
-      <button 
+      <a 
         mat-button 
         class="menu-link" 
-        (click)="onNavigate(item.link)">
+        [routerLink]="item.link"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: item.link === '/'}"
+        (click)="closeMenu()">
         {{ item.label }}
-      </button>
+      </a>
     }
   </div>
 </nav>
