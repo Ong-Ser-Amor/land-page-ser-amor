@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Menu } from '@app/shared/components/menu/menu';
-import { FooterComponent } from '@app/shared/components/footer/footer.component';
 
 @Component({
   selector: 'app-parceiros',
   standalone: true,
-  imports: [CommonModule, Menu, FooterComponent],
+  imports: [CommonModule],
   templateUrl: './parceiros.component.html',
   styleUrls: ['./parceiros.component.css']
 })
