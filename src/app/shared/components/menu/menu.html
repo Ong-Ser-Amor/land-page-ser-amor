@@ -1,7 +1,10 @@
 <nav class="menu">
   <div class="menu-top-row">
     <div class="menu-header">
-      <img src="/logo.png" alt="ONG Ser Amor Logo" class="logo" />
+      <button type="button" class="brand-link" (click)="onNavigate('top')" aria-label="Voltar para a tela principal">
+        <img src="/logo.png" alt="ONG Ser Amor Logo" class="logo" />
+        <span class="brand-name">Ser Amor</span>
+      </button>
     </div>
     <button class="menu-toggle" (click)="toggleMenu()" aria-label="Menu">
       <span class="hamburger">{{ menuOpen() ? '✕' : '☰' }}</span>
