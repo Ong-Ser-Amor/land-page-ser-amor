@@ -25,6 +25,7 @@
 }
 
 .section-title {
+  font-family: Montserrat, sans-serif;
   font-size: 2.5rem;
   font-weight: 800;
   color: #333;
@@ -33,12 +34,14 @@
 }
 
 .subtitle {
+  font-family: Roboto, sans-serif;
   color: #666;
   font-size: 1.1rem;
   line-height: 1.8;
 }
 
 .group-title {
+  font-family: Montserrat, sans-serif;
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 2rem;
@@ -81,6 +84,7 @@
 }
 
 mat-card-title {
+  font-family: Montserrat, sans-serif;
   font-weight: 700 !important;
   margin-bottom: 1.2rem !important;
   display: block;
@@ -88,6 +92,7 @@ mat-card-title {
 }
 
 mat-card-content p {
+  font-family: Roboto, sans-serif;
   color: #666;
   margin-bottom: 1.5rem;
   line-height: 1.6;
@@ -113,6 +118,7 @@ mat-card-actions {
 }
 
 .requirements-list li {
+  font-family: Roboto, sans-serif;
   font-size: 1.1rem;
   margin-bottom: 0.8rem;
   padding-left: 2rem;

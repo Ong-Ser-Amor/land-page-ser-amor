@@ -25,6 +25,7 @@
 }
 
 .section-title {
+  font-family: Montserrat, sans-serif;
   font-size: 2.5rem;
   font-weight: 800;
   color: #333;
@@ -33,6 +34,7 @@
 }
 
 .subtitle {
+  font-family: Roboto, sans-serif;
   color: #666;
   font-size: 1.1rem;
   line-height: 1.8;
@@ -79,6 +81,7 @@
 }
 
 mat-card-title {
+  font-family: Montserrat, sans-serif;
   font-size: 1.6rem !important;
   font-weight: 700 !important;
   color: #333;
@@ -87,6 +90,7 @@ mat-card-title {
 }
 
 mat-card-content p {
+  font-family: Roboto, sans-serif;
   color: #666;
   font-size: 1.1rem;
   line-height: 1.6;
@@ -126,6 +130,7 @@ mat-card-actions button {
 }
 
 .pix-info h2 {
+  font-family: Montserrat, sans-serif;
   font-size: 2.2rem;
   font-weight: 800;
   color: #333;
@@ -133,6 +138,7 @@ mat-card-actions button {
 }
 
 .pix-info p {
+  font-family: Roboto, sans-serif;
   font-size: 1.2rem;
   color: #666;
   margin-bottom: 2.5rem;
@@ -150,6 +156,7 @@ mat-card-actions button {
 }
 
 .pix-label {
+  font-family: Montserrat, sans-serif;
   font-weight: 700;
   color: #e91e63;
 }

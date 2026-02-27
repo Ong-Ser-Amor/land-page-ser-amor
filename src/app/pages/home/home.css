@@ -415,13 +415,16 @@ nav.menu .menu-link {
   .construction-title {
     margin: 0;
     color: #333;
+    font-family: Montserrat, sans-serif;
     font-size: clamp(1.6rem, 3.5vw, 2.3rem);
-    font-weight: 700;
+    font-weight: 800;
+    letter-spacing: 0.015rem;
   }
 
   .construction-message {
     margin: 0;
     color: #5f5f5f;
+    font-family: Roboto, sans-serif;
     font-size: 0.98rem;
     line-height: 1.6;
     letter-spacing: 0.01rem;
@@ -452,9 +455,11 @@ nav.menu .menu-link {
   .loading-text {
     margin: 0;
     color: #777;
-    font-size: 0.9rem;
+    font-family: Roboto, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
     line-height: 1.6;
-    letter-spacing: 0.01rem;
+    letter-spacing: 0.02rem;
   }
 
   .loading-text::after {
