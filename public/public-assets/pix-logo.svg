@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
-  <rect width="80" height="80" fill="none"/>
-  <text x="40" y="35" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#1f70c7">PIX</text>
-  <rect x="10" y="50" width="60" height="20" rx="4" fill="#1f70c7" opacity="0.1"/>
-  <text x="40" y="62" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#1f70c7">Chave CNPJ</text>
-</svg>

@@ -9,25 +9,26 @@
 
 .section-carousel .section-description {
   font-family: Montserrat, sans-serif;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.0125rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  letter-spacing: 0.01rem;
+  color: #444;
   text-align: left;
   max-width: 80.625rem;
   margin: 0 auto 1.25rem auto;
 }
 
 .carousel-outer {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
+  width: 100%;
 }
 
 .carousel-frame {
   width: 100%;
   overflow: hidden;
   background: #f6f6f6;
+  border-radius: 0.75rem;
+  position: relative;
 }
 
 .carousel-track {
@@ -61,6 +62,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.carousel-btn.prev {
+  left: 0.625rem;
+}
+
+.carousel-btn.next {
+  right: 0.625rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -68,7 +81,9 @@
     flex: 0 0 100%;
   }
 
-  .carousel-item img {
-    height: 15rem;
+  .carousel-btn {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 1rem;
   }
 }
