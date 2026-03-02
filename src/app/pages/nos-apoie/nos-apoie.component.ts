@@ -33,5 +33,31 @@ export class NosApoieComponent {
     }
   ];
 
-  pixKey = '00.000.000/0001-00';
+  pixKey = '42.429.908/0001-65';
+  isPixCopied = false;
+
+  copyPixKey(): void {
+    const textToCopy = this.pixKey;
+
+    if (navigator.clipboard?.writeText) {
+      navigator.clipboard.writeText(textToCopy);
+      this.showCopiedFeedback();
+      return;
+    }
+
+    const tempInput = document.createElement('input');
+    tempInput.value = textToCopy;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempInput);
+    this.showCopiedFeedback();
+  }
+
+  private showCopiedFeedback(): void {
+    this.isPixCopied = true;
+    setTimeout(() => {
+      this.isPixCopied = false;
+    }, 2000);
+  }
 }
