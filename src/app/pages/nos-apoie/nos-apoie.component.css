@@ -144,6 +144,10 @@ mat-card-actions button {
   margin-bottom: 2.5rem;
 }
 
+.pix-cnpj {
+  margin-bottom: 1rem !important;
+}
+
 .pix-key-box {
   background: #fff;
   border: 2px dashed #e91e63;
@@ -169,6 +173,46 @@ mat-card-actions button {
 
 .pix-qr {
   flex-shrink: 0;
+}
+
+.pix-qrcode {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  border: 1px solid #eee;
+  object-fit: cover;
+  background: #fff;
+}
+
+.copy-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-width: 6rem;
+}
+
+.btn-copy {
+  flex-shrink: 0;
+}
+
+.copy-feedback {
+  font-family: Roboto, sans-serif;
+  font-size: 0.85rem;
+  color: #2e7d32;
+  font-weight: 600;
+  white-space: nowrap;
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(2px);
+  max-width: 0;
+  overflow: hidden;
+  transition: opacity 0.25s ease, transform 0.25s ease, max-width 0.25s ease;
+}
+
+.copy-feedback.visible {
+  opacity: 1;
+  transform: translateY(0);
+  max-width: 5rem;
 }
 
 .qr-placeholder {
@@ -206,5 +250,10 @@ mat-card-actions button {
   
   .pix-section {
     padding: 3rem 1.5rem;
+  }
+
+  .pix-qrcode {
+    width: 180px;
+    height: 180px;
   }
 }
