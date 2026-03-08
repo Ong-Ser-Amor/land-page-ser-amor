@@ -24,7 +24,7 @@ interface CarouselImage {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Home implements AfterViewInit, OnDestroy {
-  emConstrucao = true;
+  emConstrucao = false;
   currentSlideIndex = 0;
   private autoSlideInterval: any = null;
   private readonly isBrowser: boolean;

@@ -16,7 +16,7 @@
   color: #444;
   text-align: left;
   max-width: 80.625rem;
-  margin: 0 auto 1.25rem auto;
+  margin: 0 0 1.25rem 0;
 }
 
 .carousel-outer {
@@ -45,9 +45,10 @@
 .carousel-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
   border-radius: 0.5rem;
+  background: #fff;
 }
 
 .carousel-btn {
