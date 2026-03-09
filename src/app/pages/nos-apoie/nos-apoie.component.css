@@ -1,128 +1,259 @@
-.nos-apoie-section{
-  max-width: 80.625rem;
-  margin: 0 auto 1.25rem auto;
-}
-
-.nos-apoie-section .nos-apoie-title {
-  font-family: Montserrat, sans-serif;
-  font-weight: 700;
-  font-size: 3rem;
-  letter-spacing: 0.0125rem;
-  text-align: center;
-  color: #61227E;
-}
-
-.nos-apoie-section .nos-apoie-description {
-  font-family: Montserrat, sans-serif;
-  font-weight: 500;
-  font-size: 0.95rem;
-  line-height: 1.75;
-  letter-spacing: 0.01rem;
-  color: #444;
-  text-align: left;
-}
-
-.pix-capsule {
+.header {
   width: 100%;
-  max-width: 72.0625rem;
-  min-height: 16.0625rem;
-  border: 0.0625rem solid #ddd;
-  border-radius: 1.25rem;
-  padding: 2rem;
-  background: #f9f9f9;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.header-container {
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.pix-content {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.support-page {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.pix-title {
+.page-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+}
+
+.section-title {
   font-family: Montserrat, sans-serif;
-  font-weight: 700;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  letter-spacing: 0.0125rem;
+  font-size: 2.5rem;
+  font-weight: 800;
   color: #333;
-  margin: 0 0 0.5rem 0;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
 }
 
-.pix-info-wrapper {
+.subtitle {
+  font-family: Roboto, sans-serif;
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 6rem;
+}
+
+.support-card {
+  padding: 3rem 2rem;
+  text-align: center;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+  background: #fff;
+}
+
+.support-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  border-color: #e91e63;
+}
+
+.icon-box {
+  width: 80px;
+  height: 80px;
+  background: #fdf2f5;
+  color: #e91e63;
+  border-radius: 50%;
   display: flex;
-  gap: 2rem;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 2rem;
 }
 
-.pix-details {
+.icon-box mat-icon {
+  font-size: 40px;
+  width: 40px;
+  height: 40px;
+}
+
+mat-card-title {
+  font-family: Montserrat, sans-serif;
+  font-size: 1.6rem !important;
+  font-weight: 700 !important;
+  color: #333;
+  margin-bottom: 1.5rem !important;
+  display: block;
+}
+
+mat-card-content p {
+  font-family: Roboto, sans-serif;
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+}
+
+mat-card-actions button {
+  padding: 0.8rem 2.5rem !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  border-radius: 50px !important;
+}
+
+.pix-section {
+  background: #f8f9fa;
+  border-radius: 30px;
+  padding: 4rem;
+  margin-top: 4rem;
+}
+
+.pix-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.pix-info {
   flex: 1;
+  min-width: 300px;
+}
+
+.pix-info h2 {
+  font-family: Montserrat, sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.pix-info p {
+  font-family: Roboto, sans-serif;
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2.5rem;
+}
+
+.pix-cnpj {
+  margin-bottom: 1rem !important;
+}
+
+.pix-key-box {
+  background: #fff;
+  border: 2px dashed #e91e63;
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: fit-content;
 }
 
 .pix-label {
   font-family: Montserrat, sans-serif;
-  font-weight: 500;
-  font-size: 0.95rem;
-  line-height: 1.65;
-  letter-spacing: 0.01rem;
-  margin: 0.25rem 0;
-  color: #444;
+  font-weight: 700;
+  color: #e91e63;
 }
 
-.pix-images {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
+.pix-value {
+  font-family: monospace;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.pix-qr {
+  flex-shrink: 0;
 }
 
 .pix-qrcode {
-  height: 6.25rem;
-  border-radius: 0.5rem;
-  object-fit: contain;
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  border: 1px solid #eee;
+  object-fit: cover;
+  background: #fff;
 }
 
-.pix-logo {
-  width: 5rem;
-  height: auto;
-  object-fit: contain;
+.copy-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-width: 6rem;
 }
 
-.pix-contact {
-  font-family: Montserrat, sans-serif;
-  font-weight: 500;
-  font-size: 0.95rem;
-  line-height: 1.7;
-  letter-spacing: 0.01rem;
-  color: #444;
-  margin: 0.75rem 0 0 0;
-  padding-top: 0.75rem;
-  border-top: 0.0625rem solid #e0e0e0;
+.btn-copy {
+  flex-shrink: 0;
 }
 
-@media screen and (max-width: 768px) {
-  .nos-apoie-section {
-    padding: 0;
-    box-sizing: border-box;
-  }
+.copy-feedback {
+  font-family: Roboto, sans-serif;
+  font-size: 0.85rem;
+  color: #2e7d32;
+  font-weight: 600;
+  white-space: nowrap;
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(2px);
+  max-width: 0;
+  overflow: hidden;
+  transition: opacity 0.25s ease, transform 0.25s ease, max-width 0.25s ease;
+}
 
-  .pix-capsule {
-    padding: 1rem;
-    box-sizing: border-box;
-  }
+.copy-feedback.visible {
+  opacity: 1;
+  transform: translateY(0);
+  max-width: 5rem;
+}
 
-  .pix-info-wrapper {
+.qr-placeholder {
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ccc;
+  border: 1px solid #eee;
+  gap: 1rem;
+}
+
+.qr-placeholder mat-icon {
+  font-size: 80px;
+  width: 80px;
+  height: 80px;
+}
+
+@media (max-width: 768px) {
+  .pix-card {
     flex-direction: column;
-    gap: 1rem;
+    text-align: center;
+    gap: 3rem;
   }
-
-  .pix-images {
-    width: 100%;
-    justify-content: center;
+  
+  .pix-key-box {
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .pix-section {
+    padding: 3rem 1.5rem;
   }
 
   .pix-qrcode {
-    width: min(10rem, 100%);
-    height: auto;
-    max-width: 100%;
+    width: 180px;
+    height: 180px;
   }
 }

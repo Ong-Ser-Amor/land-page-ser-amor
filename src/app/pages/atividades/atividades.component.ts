@@ -1,27 +1,32 @@
 import { Component } from '@angular/core';
-import { SectionCarouselComponent } from '@app/shared/components/section-carousel/section-carousel.component';
+import { CommonModule } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-atividades',
   standalone: true,
-  imports: [SectionCarouselComponent],
-  templateUrl: './atividades.component.html'
+  imports: [CommonModule, MatCardModule, MatButtonModule, MatIconModule],
+  templateUrl: './atividades.component.html',
+  styleUrls: ['./atividades.component.css']
 })
 export class AtividadesComponent {
-  title = 'ATIVIDADES';
-  titleColor = '#D8CD16';
-  description = `Para cumprir o tripé que norteia nosso trabalho, oferecemos aulas de jiu-jitsu, capoeira, futebol, balé, reforço escolar, informática básica e avançada e arteterapia. Também oferecemos apoio psicológico, com terapia individual e encontros em grupo com temas determinados. Além disso, promovemos rodas de leitura na biblioteca e atividades de recreação criativa com o suporte da nossa brinquedoteca.`;
+  mainActivities = [
+    { title: 'Futebol', icon: 'sports_soccer', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.' },
+    { title: 'Informática', icon: 'computer', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.' },
+    { title: 'Reforço', icon: 'school', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.' }
+  ];
 
-  images = [
-    { src: '/atividades/image1.jpeg' },
-    { src: '/atividades/image2.jpeg' },
-    { src: '/atividades/image3.jpeg' },
-    { src: '/atividades/image4.jpeg' },
-    { src: '/atividades/image5.jpeg' },
-    { src: '/atividades/image6.jpeg' },
-    { src: '/atividades/image7.jpeg' },
-    { src: '/atividades/image8.jpeg' },
-    { src: '/atividades/image9.jpeg' },
-    { src: '/atividades/image10.jpeg' }
+  requirements = [
+    'Ter entre 7 a 12 anos',
+    'Cursando ensino fundamental',
+    'Participar de 70% das aulas'
+  ];
+
+  otherActivities = [
+    { title: 'Atividade 1' },
+    { title: 'Atividade 2' },
+    { title: 'Atividade 3' }
   ];
 }

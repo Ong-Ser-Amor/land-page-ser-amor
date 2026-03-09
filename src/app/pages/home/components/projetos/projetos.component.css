@@ -1,0 +1,33 @@
+/* Reforço de especificidade para garantir tipografia correta em todas as situações */
+.projetos-section .section-title,
+.projetos-section h2.section-title {
+  font-family: Montserrat, sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 3rem !important;
+  letter-spacing: 0.0125rem !important;
+  text-align: center !important;
+  margin: 0 0 1rem 0 !important;
+}
+
+.projetos-section .projetos-descricao,
+.projetos-section .section-description.projetos-descricao {
+  font-family: Montserrat, sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 1.05rem !important;
+  line-height: 1.75 !important;
+  letter-spacing: 0.01rem !important;
+  color: #444 !important;
+  text-align: left !important;
+  max-width: 80.625rem !important;
+  margin: 0 0 1.25rem 0 !important;
+}
+
+.projetos-section .projetos-descricao p {
+  margin-bottom: 1.1em !important;
+}
+
+.projetos-section .projetos-descricao b {
+  color: #00BF63 !important;
+  font-weight: 700 !important;
+  font-family: Montserrat, sans-serif !important;
+}

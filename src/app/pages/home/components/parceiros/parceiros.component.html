@@ -1,0 +1,27 @@
+
+<section class="parceiros-section" id="parceiros">
+  <div class="container">
+    <h2 class="section-title" [style.color]="titleColor">{{ title }}</h2>
+    <p class="section-description" *ngIf="description">{{ description }}</p>
+
+    <!-- Desktop: mural de logos -->
+    <div class="parceiros-mural" *ngIf="!isMobile">
+      <div class="parceiros-logos">
+        <div class="parceiro-logo" *ngFor="let img of images">
+          <img [src]="img.src" [alt]="title" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile: carrossel só com as imagens -->
+    <div *ngIf="isMobile" class="parceiros-carousel-mobile">
+      <app-section-carousel
+        [sectionId]="'parceiros'"
+        [title]="''"
+        [titleColor]="''"
+        [description]="''"
+        [images]="images"
+      ></app-section-carousel>
+    </div>
+  </div>
+</section>
