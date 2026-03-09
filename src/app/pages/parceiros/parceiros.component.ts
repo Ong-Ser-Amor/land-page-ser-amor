@@ -27,7 +27,7 @@ Seja com incentivo  financeiro, parcerias constante nos projetos sazonais, inter
     { src: '/parceiros/image8.jpeg' },
     { src: '/parceiros/image9.jpeg' },
     { src: '/parceiros/image10.jpeg' },
-    { src: '/parceiros/image11.jpg' }
+    { src: '/parceiros/image11.jpg' } 
   ];
 
   isMobile = false;

@@ -45,6 +45,6 @@ Jantar solidário: toda semana, um dia a noite, saímos com marmitas de comida q
     { src: '/projetos/image11.jpeg' },
     { src: '/projetos/image12.jpeg' },
     { src: '/projetos/image13.jpeg' },
-    { src: '/projetos/image14.jpeg' },
+    { src: '/projetos/image14.jpeg' }, 
   ];
 }
