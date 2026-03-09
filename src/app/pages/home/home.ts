@@ -33,6 +33,7 @@ export class Home implements AfterViewInit, OnDestroy {
     { src: '/carrossel/imagem1.png', alt: 'Imagem 1' },
     { src: '/carrossel/imagem2.png', alt: 'Imagem 2' },
     { src: '/carrossel/imagem3.png', alt: 'Imagem 3' },
+    { src: '/carrossel/imagem4.jpeg', alt: 'Imagem 4' },
   ];
 
   constructor(

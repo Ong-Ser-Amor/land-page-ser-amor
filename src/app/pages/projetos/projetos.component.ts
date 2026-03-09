@@ -32,10 +32,19 @@ Acolhimento nas casas lares: Esse é o primeiro projeto da OSC Ser Amor. Há 11 
 Jantar solidário: toda semana, um dia a noite, saímos com marmitas de comida quente e saborosa para entrega para moradores de rua alternados com comunidades em extrema vulnerabilidade  em Itapevi. O objetivo dessa ação é além de saciar a fome,  mostrar ao novos voluntários  que não precisa ir para outro país para conhecer pessoas que ainda vivem em insegurança alimentar e pobreza extrema e precisa do nosso engajamento voluntário para diagnosticar o problema e atuar para mudar a realidade dessas famílias.`;
 
   images = [
-    { src: '/carrossel-quem-somos/image1.svg' },
-    { src: '/carrossel-quem-somos/image2.svg' },
-    { src: '/carrossel-quem-somos/image3.svg' },
-    { src: '/carrossel-quem-somos/image4.svg' },
-    { src: '/carrossel-quem-somos/image5.svg' }
+    { src: '/projetos/image1.jpeg' },
+    { src: '/projetos/image2.jpeg' },
+    { src: '/projetos/image3.jpeg' },
+    { src: '/projetos/image4.jpeg' },
+    { src: '/projetos/image5.jpeg' },
+    { src: '/projetos/image6.jpeg' },
+    { src: '/projetos/image7.jpeg' },
+    { src: '/projetos/image8.jpeg' },
+    { src: '/projetos/image9.jpeg' },
+    { src: '/projetos/image10.jpeg' },
+    { src: '/projetos/image11.jpeg' },
+    { src: '/projetos/image12.jpeg' },
+    { src: '/projetos/image13.jpeg' },
+    { src: '/projetos/image14.jpeg' },
   ];
 }

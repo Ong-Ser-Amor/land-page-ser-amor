@@ -20,6 +20,8 @@ export class SectionCarouselComponent implements OnInit, OnDestroy {
   @Input() description = '';
   @Input() sectionId?: string;
   @Input() images: CarouselImage[] = [];
+  @Input() imageFit: 'contain' | 'cover' = 'contain';
+  @Input() imageAspectRatio: string | null = null;
 
   // Carousel behaviour
   currentIndex = 0; // start index of visible window

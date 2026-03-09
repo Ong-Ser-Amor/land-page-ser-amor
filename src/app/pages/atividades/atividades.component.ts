@@ -20,6 +20,8 @@ export class AtividadesComponent {
     { src: '/atividades/image5.jpeg' },
     { src: '/atividades/image6.jpeg' },
     { src: '/atividades/image7.jpeg' },
-    { src: '/atividades/image8.jpeg' }
+    { src: '/atividades/image8.jpeg' },
+    { src: '/atividades/image9.jpeg' },
+    { src: '/atividades/image10.jpeg' }
   ];
 }
