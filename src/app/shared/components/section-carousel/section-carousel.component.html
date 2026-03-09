@@ -9,8 +9,8 @@
         <button class="carousel-btn prev" (click)="prevSlide()" aria-label="Anterior">&#10094;</button>
 
         <div class="carousel-track" [style.transform]="'translateX(' + trackTranslatePercent() + '%)'">
-          <div class="carousel-item" *ngFor="let img of images">
-            <img [src]="img.src" [alt]="img.alt || title" />
+          <div class="carousel-item" *ngFor="let img of images" [style.aspect-ratio]="imageAspectRatio">
+            <img [src]="img.src" [alt]="img.alt || title" [style.object-fit]="imageFit" />
           </div>
         </div>
 
