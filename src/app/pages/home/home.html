@@ -2,7 +2,7 @@
   <header class="header">
     <div class="header-container">
       <div class="menu-section">
-        <app-menu></app-menu>
+        <app-menu (navigateTo)="onMenuNavigate($event)"></app-menu>
       </div>
     </div>
   </header>
@@ -17,8 +17,8 @@
         </p>
 
         <div class="hero-buttons">
-          <button mat-raised-button color="primary" (click)="onDonateClick()">Doe Agora</button>
-          <button mat-stroked-button (click)="onKnowMoreClick()">Saiba Mais</button>
+          <button type="button" class="btn btn-primary" (click)="onDonateClick()">Doe Agora</button>
+          <button type="button" class="btn btn-secondary" (click)="onKnowMoreClick()">Saiba Mais</button>
         </div>
       </div>
 
@@ -36,9 +36,15 @@
           <div class="carousel-wrapper">
             @if (carouselImages.length > 0) {
               <img
-                [src]="carouselImages[currentSlideIndex].src"
-                [alt]="carouselImages[currentSlideIndex].alt"
+                [src]="currentHeroImage.src"
+                [alt]="currentHeroImage.alt"
                 class="carousel-image"
+                [class.animate]="enableCarouselAnimation"
+                width="960"
+                height="601"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
               />
             }
           </div>
@@ -62,6 +68,7 @@
     </section>
 
     <app-quem-somos></app-quem-somos>
+
     <app-atividades></app-atividades>
     <app-projetos></app-projetos>
     <app-parceiros></app-parceiros>

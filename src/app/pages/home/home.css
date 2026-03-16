@@ -73,17 +73,16 @@
   flex-wrap: wrap;
 }
 
-.hero-buttons button[mat-raised-button],
-.hero-buttons button[mat-stroked-button] {
+.hero-buttons .btn {
   transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
 }
 
-.hero-buttons button[mat-raised-button]:hover {
+.hero-buttons .btn-primary:hover {
   transform: translateY(-0.125rem) scale(1.02);
   box-shadow: 0 0.4rem 0.9rem rgba(233, 30, 99, 0.28);
 }
 
-.hero-buttons button[mat-stroked-button]:hover {
+.hero-buttons .btn-secondary:hover {
   transform: translateY(-0.125rem);
   background-color: #fce4ec !important;
 }
@@ -119,36 +118,6 @@
 .btn-secondary:hover {
   background-color: #fce4ec;
   transform: translateY(-0.125rem);
-}
-
-/* Material button adjustments to match original styles */
-button[mat-raised-button], .mat-raised-button {
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 0.5rem;
-  font-family: Roboto, sans-serif;
-  text-transform: none;
-}
-
-button[mat-stroked-button], .mat-stroked-button {
-  padding: 0.65rem 1.4rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 0.5rem;
-  font-family: Roboto, sans-serif;
-  text-transform: none;
-}
-
-button[mat-raised-button][color="primary"], .mat-raised-button.mat-primary {
-  background-color: #e91e63 !important;
-  color: #ffffff !important;
-}
-
-button[mat-stroked-button] {
-  border-color: #e91e63 !important;
-  color: #e91e63 !important;
-  background-color: transparent !important;
 }
 
 /* Menu button visual tweaks */
@@ -210,8 +179,11 @@ nav.menu .menu-link {
   height: 100%;
   display: block;
   object-fit: cover;
-  animation: slideIn 0.7s ease-out;
   object-position: center;
+}
+
+.carousel-image.animate {
+  animation: slideIn 0.7s ease-out;
 }
 
 @keyframes slideIn {
@@ -524,5 +496,9 @@ nav.menu .menu-link {
     animation: none !important;
     transition: none !important;
   }
+}
+
+.deferred-placeholder {
+  min-height: 24rem;
 }
 

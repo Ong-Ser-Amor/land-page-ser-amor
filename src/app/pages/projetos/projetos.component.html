@@ -23,13 +23,17 @@
 
       <p><b>Jantar solidário:</b> toda semana, um dia a noite, saímos com marmitas de comida quente e saborosa para entrega para moradores de rua alternados com comunidades em extrema vulnerabilidade em Itapevi. O objetivo dessa ação é além de saciar a fome, mostrar ao novos voluntários que não precisa ir para outro país para conhecer pessoas que ainda vivem em insegurança alimentar e pobreza extrema e precisa do nosso engajamento voluntário para diagnosticar o problema e atuar para mudar a realidade dessas famílias.</p>
     </div>
-    <app-section-carousel
-      [sectionId]="'projetos'"
-      [title]="''"
-      [titleColor]="titleColor"
-      [images]="images"
-      [imageFit]="'cover'"
-      [imageAspectRatio]="'1 / 1'"
-    ></app-section-carousel>
+    @defer (on viewport) {
+      <app-section-carousel
+        [sectionId]="'projetos'"
+        [title]="''"
+        [titleColor]="titleColor"
+        [images]="images"
+        [imageFit]="'cover'"
+        [imageAspectRatio]="'1 / 1'"
+      ></app-section-carousel>
+    } @placeholder {
+      <div class="carousel-placeholder" aria-hidden="true"></div>
+    }
   </div>
 </section>

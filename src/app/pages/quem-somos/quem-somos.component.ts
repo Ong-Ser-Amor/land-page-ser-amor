@@ -2,7 +2,6 @@ import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core
 import { isPlatformBrowser } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { NgFor } from '@angular/common';
-import { MatCardModule } from '@angular/material/card';
 
 interface CarouselImage {
   src: string;
@@ -12,7 +11,7 @@ interface CarouselImage {
 @Component({
   selector: 'app-quem-somos',
   standalone: true,
-  imports: [CommonModule, NgFor, MatCardModule],
+  imports: [CommonModule, NgFor],
   templateUrl: './quem-somos.component.html',
   styleUrls: ['./quem-somos.component.css']
 })

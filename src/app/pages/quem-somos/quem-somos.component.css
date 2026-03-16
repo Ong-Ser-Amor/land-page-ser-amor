@@ -164,6 +164,12 @@
   right: 0.625rem;
 }
 
+.carousel-placeholder {
+  min-height: 14rem;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, #f3f3f3 0%, #fafafa 50%, #f3f3f3 100%);
+}
+
 @media screen and (max-width: 768px) {
   .top-row {
     flex-direction: column;

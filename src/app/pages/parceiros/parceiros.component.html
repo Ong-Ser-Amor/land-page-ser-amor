@@ -5,23 +5,31 @@
     <p class="section-description" *ngIf="description">{{ description }}</p>
 
     <!-- Desktop: mural de logos -->
-    <div class="parceiros-mural" *ngIf="!isMobile">
-      <div class="parceiros-logos">
-        <div class="parceiro-logo" *ngFor="let img of images">
-          <img [src]="img.src" [alt]="title" />
+    @defer (on viewport) {
+      <div class="parceiros-mural" *ngIf="!isMobile">
+        <div class="parceiros-logos">
+          <div class="parceiro-logo" *ngFor="let img of images">
+            <img [src]="img.src" [alt]="title" loading="lazy" decoding="async" width="240" height="120" />
+          </div>
         </div>
       </div>
-    </div>
+    } @placeholder {
+      <div class="parceiros-mural" aria-hidden="true"></div>
+    }
 
     <!-- Mobile: carrossel só com as imagens -->
-    <div *ngIf="isMobile" class="parceiros-carousel-mobile">
-      <app-section-carousel
-        [sectionId]="'parceiros'"
-        [title]="''"
-        [titleColor]="''"
-        [description]="''"
-        [images]="images"
-      ></app-section-carousel>
-    </div>
+    @defer (on viewport) {
+      <div *ngIf="isMobile" class="parceiros-carousel-mobile">
+        <app-section-carousel
+          [sectionId]="'parceiros'"
+          [title]="''"
+          [titleColor]="''"
+          [description]="''"
+          [images]="images"
+        ></app-section-carousel>
+      </div>
+    } @placeholder {
+      <div class="parceiros-carousel-mobile" aria-hidden="true"></div>
+    }
   </div>
 </section>

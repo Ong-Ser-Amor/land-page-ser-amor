@@ -22,7 +22,7 @@
           cantos da cidade.
         </p>
       </div>
-      <img class="image-block" src="/quem-somos/quem-somos.jpeg" alt="Imagem da ONG Ser Amor" />
+      <img class="image-block" src="/quem-somos/quem-somos.webp" alt="Imagem da ONG Ser Amor" loading="lazy" decoding="async" width="520" height="320" />
     </div>
 
     <h3 class="history-title" id="historia">Sobre a nossa história</h3>
@@ -48,19 +48,23 @@
       a vida de mais de 1.000 famílias.
     </p>
 
-    <div class="carousel-quem-somos">
-      <div class="carousel-frame">
-        <button class="carousel-btn prev" (click)="prevSlide()" aria-label="Anterior">&#10094;</button>
+    @defer (on viewport) {
+      <div class="carousel-quem-somos">
+        <div class="carousel-frame">
+          <button class="carousel-btn prev" (click)="prevSlide()" aria-label="Anterior">&#10094;</button>
 
-        <div class="carousel-track" [style.transform]="'translateX(' + trackTranslatePercent() + '%)'">
-          <div class="carousel-item" *ngFor="let img of carouselImages">
-            <img [src]="img.src" [alt]="img.alt" />
+          <div class="carousel-track" [style.transform]="'translateX(' + trackTranslatePercent() + '%)'">
+            <div class="carousel-item" *ngFor="let img of carouselImages">
+              <img [src]="img.src" [alt]="img.alt" loading="lazy" decoding="async" width="640" height="426" />
+            </div>
           </div>
-        </div>
 
-        <button class="carousel-btn next" (click)="nextSlide()" aria-label="Próximo">&#10095;</button>
+          <button class="carousel-btn next" (click)="nextSlide()" aria-label="Próximo">&#10095;</button>
+        </div>
       </div>
-    </div>
+    } @placeholder {
+      <div class="carousel-placeholder" aria-hidden="true"></div>
+    }
 
     <!-- Nova seção: Criança com fome não aprende -->
     <div class="cozinha-section">
@@ -69,19 +73,23 @@
         Servimos café da manhã, almoço e café da tarde em dia de aula. Cardápio completo e feito com muito carinho por nossas voluntárias. Nosso time de Acolhimento familiar mapeia as necessidades das famílias das crianças e programa a retirada da cesta básica mensal  que está condicionada a assiduidade das crianças as atividades.<br>
         O objetivo é mantermos o vínculo com a criança para trabalharmos  todos os aspecto de desenvolvimento bem como garantir que em casa não falte comida no prato.
       </p>
-      <div class="carousel-cozinha">
-        <div class="carousel-frame">
-          <button class="carousel-btn prev" (click)="prevSlideFome()" aria-label="Anterior">&#10094;</button>
+      @defer (on viewport) {
+        <div class="carousel-cozinha">
+          <div class="carousel-frame">
+            <button class="carousel-btn prev" (click)="prevSlideFome()" aria-label="Anterior">&#10094;</button>
 
-          <div class="carousel-track" [style.transform]="'translateX(' + trackTranslatePercentFome() + '%)'">
-            <div class="carousel-item" *ngFor="let img of carouselFomeImages">
-              <img [src]="img.src" [alt]="img.alt" />
+            <div class="carousel-track" [style.transform]="'translateX(' + trackTranslatePercentFome() + '%)'">
+              <div class="carousel-item" *ngFor="let img of carouselFomeImages">
+                <img [src]="img.src" [alt]="img.alt" loading="lazy" decoding="async" width="640" height="426" />
+              </div>
             </div>
-          </div>
 
-          <button class="carousel-btn next" (click)="nextSlideFome()" aria-label="Próximo">&#10095;</button>
+            <button class="carousel-btn next" (click)="nextSlideFome()" aria-label="Próximo">&#10095;</button>
+          </div>
         </div>
-      </div>
+      } @placeholder {
+        <div class="carousel-placeholder" aria-hidden="true"></div>
+      }
     </div>
   </div>
 </section>

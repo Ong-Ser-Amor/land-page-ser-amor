@@ -5,6 +5,7 @@ import {
   writeResponseToNodeResponse,
 } from '@angular/ssr/node';
 import express from 'express';
+import { existsSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -63,6 +64,25 @@ app.use(
     redirect: false,
   }),
 );
+
+app.get('*', (req, res, next) => {
+  if (req.path.includes('.')) {
+    next();
+    return;
+  }
+
+  const prerenderedFilePath =
+    req.path === '/'
+      ? resolve(browserDistFolder, 'index.html')
+      : resolve(browserDistFolder, `.${req.path}`, 'index.html');
+
+  if (existsSync(prerenderedFilePath)) {
+    res.sendFile(prerenderedFilePath);
+    return;
+  }
+
+  next();
+});
 
 /**
  * Handle all other requests by rendering the Angular application.

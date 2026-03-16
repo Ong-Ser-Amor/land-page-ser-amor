@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { CommonModule } from '@angular/common';
 
@@ -12,7 +12,8 @@ interface CarouselImage {
   standalone: true,
   imports: [CommonModule],
   templateUrl: './section-carousel.component.html',
-  styleUrls: ['./section-carousel.component.css']
+  styleUrls: ['./section-carousel.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SectionCarouselComponent implements OnInit, OnDestroy {
   @Input() title = '';

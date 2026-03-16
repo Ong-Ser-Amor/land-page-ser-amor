@@ -12,9 +12,9 @@
   </div>
   <div class="menu-list" [class.open]="menuOpen()">
     @for (item of menuItems; track item.link) {
-      <button 
-        mat-button 
-        class="menu-link" 
+      <button
+        type="button"
+        class="menu-link"
         (click)="onNavigate(item.link)">
         {{ item.label }}
       </button>
