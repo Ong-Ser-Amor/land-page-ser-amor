@@ -10,9 +10,36 @@ import { fileURLToPath } from 'node:url';
 
 const serverDistFolder = dirname(fileURLToPath(import.meta.url));
 const browserDistFolder = resolve(serverDistFolder, '../browser');
+const canonicalOrigin = 'https://ongseramor.org';
+const canonicalHost = 'ongseramor.org';
 
 const app = express();
 const angularApp = new AngularNodeAppEngine();
+
+app.set('trust proxy', true);
+
+app.use((req, res, next) => {
+  const host = req.headers.host?.toLowerCase();
+
+  if (!host || host.startsWith('localhost') || host.startsWith('127.0.0.1')) {
+    next();
+    return;
+  }
+
+  const forwardedProtoHeader = req.headers['x-forwarded-proto'];
+  const forwardedProto = Array.isArray(forwardedProtoHeader)
+    ? forwardedProtoHeader[0]
+    : forwardedProtoHeader?.split(',')[0]?.trim();
+  const protocol = forwardedProto || req.protocol;
+  const normalizedHost = host.replace(/:\d+$/, '');
+
+  if (protocol !== 'https' || normalizedHost !== canonicalHost) {
+    res.redirect(301, `${canonicalOrigin}${req.originalUrl}`);
+    return;
+  }
+
+  next();
+});
 
 /**
  * Example Express Rest API endpoints can be defined here.

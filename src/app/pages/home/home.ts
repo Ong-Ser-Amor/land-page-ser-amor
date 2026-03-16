@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, Inject, OnDestroy, PLATFORM_ID } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
 import { Menu } from '@app/shared/components/menu/menu';
 import { FooterComponent } from '@app/shared/components/footer/footer.component';
 import { QuemSomosComponent } from '../quem-somos/quem-somos.component';
@@ -6,9 +6,10 @@ import { AtividadesComponent } from '../atividades/atividades.component';
 import { ProjetosComponent } from '../projetos/projetos.component';
 import { ParceirosComponent } from '../parceiros/parceiros.component';
 import { NosApoieComponent } from '../nos-apoie/nos-apoie.component';
-import { isPlatformBrowser, NgFor, NgIf } from '@angular/common';
+import { DOCUMENT, isPlatformBrowser, NgFor, NgIf } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { Meta, Title } from '@angular/platform-browser';
 import { track } from '@vercel/analytics';
 
 interface CarouselImage {
@@ -23,11 +24,12 @@ interface CarouselImage {
   styleUrl: './home.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Home implements AfterViewInit, OnDestroy {
+export class Home implements OnInit, AfterViewInit, OnDestroy {
   emConstrucao = false;
   currentSlideIndex = 0;
   private autoSlideInterval: any = null;
   private readonly isBrowser: boolean;
+  private readonly canonicalUrl = 'https://ongseramor.org/';
 
   carouselImages: CarouselImage[] = [
     { src: '/carrossel/imagem1.png', alt: 'Imagem 1' },
@@ -38,9 +40,16 @@ export class Home implements AfterViewInit, OnDestroy {
 
   constructor(
     private cdr: ChangeDetectorRef,
+    private title: Title,
+    private meta: Meta,
+    @Inject(DOCUMENT) private document: Document,
     @Inject(PLATFORM_ID) platformId: object
   ) {
     this.isBrowser = isPlatformBrowser(platformId);
+  }
+
+  ngOnInit() {
+    this.applySeoTags();
   }
 
   ngAfterViewInit() {
@@ -153,5 +162,39 @@ export class Home implements AfterViewInit, OnDestroy {
     };
 
     requestAnimationFrame(animateScroll);
+  }
+
+  private applySeoTags() {
+    this.document.documentElement.lang = 'pt-BR';
+
+    this.title.setTitle('Ser Amor | Reforço Escolar, Esporte e Apoio Psicológico');
+    this.meta.updateTag({
+      name: 'description',
+      content: 'A ONG Ser Amor transforma vidas através da educação, oferecendo reforço escolar, informática, esporte e apoio psicológico para crianças e adolescentes.'
+    });
+    this.meta.updateTag({
+      name: 'keywords',
+      content: 'ONG Ser Amor, ONG em Itapevi, reforço escolar, projeto social, apoio psicológico, esporte para crianças'
+    });
+    this.meta.updateTag({ name: 'author', content: 'ONG Ser Amor' });
+    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    this.meta.updateTag({ property: 'og:title', content: 'ONG Ser Amor - Transformando vidas através da educação' });
+    this.meta.updateTag({
+      property: 'og:description',
+      content: 'Reforço escolar, informática, esporte e apoio psicológico para crianças e adolescentes.'
+    });
+    this.meta.updateTag({ property: 'og:type', content: 'website' });
+    this.meta.updateTag({ property: 'og:url', content: this.canonicalUrl });
+    this.meta.updateTag({ property: 'og:image', content: 'https://ongseramor.org/logo.png' });
+
+    let canonicalLink = this.document.head.querySelector("link[rel='canonical']") as HTMLLinkElement | null;
+
+    if (!canonicalLink) {
+      canonicalLink = this.document.createElement('link');
+      canonicalLink.setAttribute('rel', 'canonical');
+      this.document.head.appendChild(canonicalLink);
+    }
+
+    canonicalLink.setAttribute('href', this.canonicalUrl);
   }
 }
